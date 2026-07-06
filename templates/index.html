@@ -10,11 +10,12 @@
 
 <body>
     <h1>Wallstreet Conditions</h1>
-    <div>
-      <input type="text" id="ticker-input" placeholder="Enter ticker (e.g. AAPL)">
+    <div style="position: relative; display: inline-block;">
+      <input type="text" id="ticker-input" placeholder="Enter ticker (e.g. AAPL)" autocomplete="off">
+      <div id="suggestions" style="position: absolute; background: white; border: 1px solid #ccc; width: 100%; display: none; z-index: 10;"></div>
+    </div>
       <button onclick="lookupStock()">Look up</button>
       <div id="stock-result"></div>
-    </div>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
     
